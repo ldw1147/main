@@ -203,7 +203,7 @@ func (m *ApartementRegister) Invoke(stub shim.ChaincodeStubInterface) peer.Respo
 		if len(para) < 3 {
 			return shim.Error("not enough arguments for registerRenter. 4 required")
 		} else {
-			return registerNewRenter(stub, para[0], para[1], para[2], para[3])
+			return registerNewRenter(stub, para[0], para[1], para[2])
 		}
 	case "newBlock":
 		return newBlock(stub, para[0], para[1], para[2])
